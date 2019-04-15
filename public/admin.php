@@ -20,9 +20,8 @@ if(!$auth->logged()) {
 }
 
 
-ob_start();
 if($p === 'home') {
-  $postController->index();
+  // $postController->index();
   // require(ROOT.'/app/Views/admin/articles/index.php');
 }
 elseif($p === 'post') {
@@ -53,6 +52,3 @@ elseif($p==='categorie.add') {
 elseif($p==='categorie.delete') {
   // require(ROOT.'/app/Views/admin/categories/delete.php');
 }
-$content = ob_get_clean();
-
-require(ROOT.'/app/Views/templates/default.php');

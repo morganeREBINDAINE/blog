@@ -34,17 +34,6 @@ class App
     return $this->db_instance;
   }
 
-  public function notFound() {
-    // header('location:index.php?p=error');
-    header('HTTP/1.0 404 Not Found');
-    die('Page introuvable');
-  }
-
-  public function forbidden() {
-    header('HTTP/1.0 403 Forbidden');
-    die('Acces interdit');
-  }
-
   public static function load() {
     session_start();
     require(ROOT.'/app/Autoloader.php');

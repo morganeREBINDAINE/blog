@@ -13,7 +13,7 @@ else {
   $p = 'home';
 }
 
-ob_start();
+
 if($p === 'home') {
   $postController->index();
   // require(ROOT.'/app/Views/articles/home.php');
@@ -34,6 +34,3 @@ elseif($p==='login') {
   $userController->login();
   // require(ROOT.'/app/Views/users/login.php');
 }
-$content = ob_get_clean();
-
-require(ROOT.'/app/Views/templates/default.php');
